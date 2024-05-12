@@ -50,12 +50,6 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
 	}
 	}
 }
-
-
-
-
-
-
 static void mqtt_sub_request_cb(void *arg, err_t result)
 {
   /* Just print the result code here for simplicity,
@@ -104,9 +98,9 @@ void example_do_connect(mqtt_client_t *client, const char *topic)
   memset(&ci, 0, sizeof(ci));
 
   /* Minimal amount of information required is client identifier, so set it here */
-  ci.client_id = "xonga";
+  ci.client_id = "clientid";
   //ci.client_user = "mosquitto";
-  //ci.client_pass = "mosquitto"; /* Tiempo en mi caso */
+  //ci.client_pass = "mosquitto";
 
 
   /* Initiate client and connect to server, if this fails immediately an error code is returned
